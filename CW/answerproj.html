@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Answering Project</title>
+</head>
+<body>
+  <div id="answerContainer">
+    <p id="answer"></p>
+  </div>
+
+  <textarea id="userInput" placeholder="Ask a question..."></textarea>
+  <button onclick="getAnswer()">Get Answer</button>
+
+  <script>
+    async function getAnswer() {
+      const userInput = document.getElementById("userInput").value;
+
+      const response = await fetch("/getAnswer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ userInput })
+      });
+
+      const data = await response.json();
+      document.getElementById("answer").innerText = data.answer;
+    }
+  </script>
+</body>
+</html>

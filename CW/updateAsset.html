@@ -10,7 +10,7 @@
       <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
       <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
 
-      <script type="text/javascript" src="JS/assettracker.js"></script>
+      <script type="text/javascript" src="JS/updateasset.js"></script>
 
   </head>
 
@@ -38,6 +38,10 @@
 
               <form style="font-size: 10pt;" id="updateAssetForm">
                 <div class="mb-3">
+                  <label for="AssetID" class="form-label">AssetID</label>
+                  <input type="text" class="form-control" id="AssetID">
+                </div>
+                <div class="mb-3">
                   <label for="AssetLabel" class="form-label">Asset Label</label>
                   <input type="text" class="form-control" id="AssetLabel">
                 </div>
@@ -58,11 +62,6 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="AssetLabel" class="form-label">Asset Label</label>
-                  <input type="text" class="form-control" id="AssetLabel">
-                </div>
-
-                <div class="mb-3">
                   <label for="AddressLine1" class="form-label">Address Line 1</label>
                   <input type="text" class="form-control" id="AddressLine1">
                 </div>
@@ -77,7 +76,7 @@
                   <input type="text" class="form-control" id="Note">
                 </div>
 
-                <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>
+                <button type="button" id="subUpdateForm" class="btn btn-primary">Submit</button> <br/><br/>
 
               </form>
             </div>
