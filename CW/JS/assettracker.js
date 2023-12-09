@@ -95,8 +95,6 @@ function getAssetList() {
       items.push("Note: " + val["Note"] + "<br/>");
       items.push('<button type="button" id="subNewForm" class="btn btn-danger" onclick="deleteAsset(' + val["AssetID"]
         + ')">Delete</button> <br/><br/>');
-        items.push('<button type="button" id="subUpdateForm" class="btn btn-danger" onclick="updateAsset(' + val["AssetID"]
-        + ')">Delete</button> <br/><br/>');
     });
 
     //Clear the assetlist div
